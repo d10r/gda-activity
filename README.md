@@ -3,14 +3,14 @@
 Script for generating GDA related activity.  
 Can be used on devnets or public testnets.
 
-===============
-TEMPORARY REQUIREMENT
 
-The dependency `@superfluid-finance/ethereum-contracts` is also needed, but omitted in package.json, because not yet release with GDA support.
+**TEMPORARY REQUIREMENT**
+
+**The dependency `@superfluid-finance/ethereum-contracts` is also needed, but omitted in package.json, because not yet release with GDA support.
 You need to manually add it:
 Navigate to a local copy of ethereum-contracts (gda branch) which you did already build. Then do `yarn link`.
-Then navigate to the root of this project and do `yarn link @superfluid-finance/ethereum-contracts`.
-===============
+Then navigate to the root of this project and do `yarn link @superfluid-finance/ethereum-contracts`.**
+
 
 On start, the application first bootstraps and then periodically exexutes a randon action.
 Bootstrapping consists of:
