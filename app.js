@@ -133,7 +133,7 @@ async function init() {
         console.log(`created pool at ${poolAddr}`);
     }
 
-    console.log(`init pool at ${poolAddr}...`);
+    console.log(`init pool at ${poolAddr} ...`);
     pool = new e.Contract(poolAddr, sfAbis.ISuperfluidPool, adminSigner);
     // [admin] pool.updateMemberUnits(memberAddr, units)
     // TODO: we need guidelines for setting units
