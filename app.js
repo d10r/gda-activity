@@ -124,7 +124,10 @@ async function init() {
     if (poolAddr === undefined) {
         console.log("create pool...");
         // [admin] gda.createPool(token, admin)
-        const tx = await gdaForwarder.connect(adminSigner).createPool(superTokenAddr, adminSigner.address);
+        const tx = await gdaForwarder.connect(adminSigner).createPool(superTokenAddr, adminSigner.address, {
+            transferabilityForUnitsOwner: true,
+            distributionFromAnyAddress: true
+        });
         receipt = await tx.wait();
 
         const poolCreatedEvent = receipt.events.find(e => e.event === "PoolCreated");
